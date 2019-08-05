@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_people_black_24dp"
+            android:title="About App" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_apps_black_24dp"
+            android:title="More Apps" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Video tutorial" />
+        <item
+            android:id="@+id/nav_tools"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Settings" />
+        <item
+            android:id="@+id/share"
+            android:icon="@drawable/ic_share_black_24dp"
+            android:title="Share this app" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Contact us" />
+        </menu>
+    </item>
+    <item android:title="Action">
+        <menu>
+
+            <item
+                android:id="@+id/exit"
+                android:icon="@drawable/delete3"
+                android:title="Exit" />
+        </menu>
+    </item>
+
+</menu>

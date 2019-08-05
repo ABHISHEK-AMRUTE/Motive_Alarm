@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Motive Alarm</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+
+
+    <string name="about_us">This app is an initiative to help those hardworking students who find it difficult to get out of the bed.
+What’s new? We believe that motivation is the key point for anyone’s success, and beginning the complete day with a motivational video can boost up your productivity level to pro.
+So just set any motivational video of your choice, either from YouTube or your from your phone, and make your way towards success.
+Note: the Alarm will not be dismissed until you solve a math problem over the screen.....................
+</string>
+    <string name="suggestion">Click above button to open YouTube in App, select desired video,click share and copy the link, paste above and then submit. See below image for reference. </string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="hello_world">Hello world!</string>
+
+    <string name="banner_ad_unit_id">ca-app-pub-2605690072930758/1743334735</string>
+    <string name="interstial_ad_unit_id">ca-app-pub-2605690072930758/9772662710</string>
+    <!--
+
+
+    <string name="banner_ad_unit_id">ca-app-pub-2605690072930758/1743334735</string>
+    <string name="interstial_ad_unit_id">ca-app-pub-2605690072930758/9772662710</string>
+
+    -->
+</resources>

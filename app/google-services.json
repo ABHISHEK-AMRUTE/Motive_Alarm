@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "865596165171",
+    "firebase_url": "https://modernmotivealarm-6861e.firebaseio.com",
+    "project_id": "modernmotivealarm-6861e",
+    "storage_bucket": "modernmotivealarm-6861e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:865596165171:android:1fec18fbae899caf",
+        "android_client_info": {
+          "package_name": "com.ma.modernmotivealarm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "865596165171-o63gjm1ap3tgd9apmih4tr40ibfo5gr1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ma.modernmotivealarm",
+            "certificate_hash": "ad86cdf6a539017a41e44965a0b25fa2fd05c4c3"
+          }
+        },
+        {
+          "client_id": "865596165171-h0mgb2d6snfm6li8f5jvtc6n0flqibgc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMDbcGWnaJbS-wHqX0sysYTtS-3VTFSuU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "865596165171-h0mgb2d6snfm6li8f5jvtc6n0flqibgc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

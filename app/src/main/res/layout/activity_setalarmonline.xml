@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".setalarm">
+
+    <ScrollView
+        android:id="@+id/scrollView5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/back_of_set_alarm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/nameedit2"
+                android:layout_width="18dp"
+                android:layout_height="17dp"
+                android:layout_alignTop="@+id/textView112"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="11dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_toEndOf="@+id/textView112"
+                android:background="@drawable/edit" />
+
+            <ImageView
+                android:id="@+id/imageView92"
+                android:layout_width="213dp"
+                android:layout_height="184dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="99dp"
+                android:layout_marginTop="9dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_marginEnd="99dp"
+                android:background="@drawable/ci" />
+
+            <TextView
+                android:id="@+id/textView142"
+                android:layout_width="91dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divider22"
+                android:layout_alignStart="@+id/divider22"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="31dp"
+                android:fontFamily="Segoe UI"
+                android:text="MODE"
+                android:textAlignment="textEnd"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView112"
+                android:layout_width="239dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView92"
+                android:layout_alignStart="@+id/imageView92"
+                android:layout_alignEnd="@+id/imageView92"
+                android:layout_marginStart="-35dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="-39dp"
+                android:fontFamily="sans-serif"
+                android:text="MOTIVE ALARM"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView152"
+                android:layout_width="168dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/switch22"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="0dp"
+                android:layout_toStartOf="@+id/switch22"
+                android:layout_toEndOf="@+id/textView142"
+                android:fontFamily="Segoe UI"
+                android:text="ONLINE"
+                android:textAlignment="center"
+                android:textColor="@color/online"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView52"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_alignStart="@+id/imageView92"
+                android:layout_alignTop="@+id/imageView92"
+                android:layout_alignEnd="@+id/imageView92"
+                android:layout_alignBottom="@+id/imageView92"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="64dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_marginEnd="27dp"
+                android:layout_marginBottom="65dp"
+                android:text="00:00"
+                android:textAlignment="center"
+                android:textColor="@color/text_of_timr"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/timeedit2"
+                android:layout_width="32dp"
+                android:layout_height="30dp"
+                android:layout_alignStart="@+id/textView52"
+                android:layout_alignTop="@+id/textView112"
+                android:layout_alignEnd="@+id/textView52"
+                android:layout_marginStart="132dp"
+                android:layout_marginTop="-107dp"
+                android:layout_marginEnd="-5dp"
+                android:background="@drawable/edit" />
+
+            <View
+                android:id="@+id/divider22"
+                android:layout_width="395dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/textView112"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="11dp"
+                android:background="#FFFFFF"
+                app:layout_constraintTop_toBottomOf="@+id/textView112" />
+
+            <Switch
+                android:id="@+id/switch22"
+                android:layout_width="52dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divider22"
+                android:layout_alignEnd="@+id/divider22"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="47dp" />
+
+            <TextView
+                android:id="@+id/textView202"
+                android:layout_width="202dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView152"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="57dp"
+                android:text="ONLINE VIDEO PREVIEW"
+                android:textColor="#E8FFFFFF"
+                android:textStyle="bold" />
+
+            <com.google.android.youtube.player.YouTubePlayerView
+                android:id="@+id/v564ideoView13132"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView202"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="8dp"
+                android:elevation="20dp"
+                android:outlineAmbientShadowColor="@color/shadow" />
+
+            <Button
+                android:id="@+id/changevideo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/v564ideoView13132"
+                android:layout_alignStart="@+id/v564ideoView13132"
+                android:layout_alignEnd="@+id/v564ideoView13132"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/bu"
+                android:elevation="10dp"
+                android:shadowColor="@color/shadow"
+                android:text="CHOOSE/CHANGE THE VIDEO" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/ageBu12"
+        android:layout_width="36dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:background="@drawable/k"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ageBu2"
+        android:layout_width="57dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:background="@drawable/done"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:color/transparent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

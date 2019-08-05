@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ma.modernmotivealarm">
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="whateverString"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:appComponentFactory">
+        <activity android:name=".how_to_video"
+            android:theme="@style/Theme.AppCompat.light.fffff"></activity>
+        <activity
+            android:name=".video_tutorial"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AppCompat.light.fffff"/>
+        <activity android:name=".contactus"
+            android:label="Contact us"/>
+        <activity android:name=".moreapps"
+            android:theme="@style/Theme.AppCompat.light.fffff"/>
+        <activity
+            android:name=".Main2Activity"
+            android:label="ABOUT US" /> <!-- Include the AdActivity configChanges and theme. -->
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity android:name=".setalarmonline"
+            android:label="Online Mode"/>
+        <activity android:name=".showmealarmonline"
+            />
+        <activity android:name=".wakemeup"
+            android:label="Wake up!!"/>
+        <activity
+            android:name=".wakemeup_youtube"
+            android:label="Wake up!!"
+            android:screenOrientation="portrait" />
+        <activity android:name=".showmyalarmoffline" />
+        <activity android:name=".gettime"
+            android:theme="@style/Theme.AppCompat.light.fffff"/>
+        <activity android:name=".getlink"
+            android:label="Get link"/>
+        <activity android:name=".onBoardingActivity"
+            android:theme="@style/Theme.AppCompat.light.fffff"/>
+
+        <activity android:name=".settings"
+            android:label="Setting"/>
+        <activity
+            android:name=".setalarm"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".starter"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.light.fffff">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="android.webkit.WebView.EnableSafeBrowsing"
+            android:value="false" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-2605690072930758~2468887768" />
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <receiver android:name=".reciver1" />
+        <receiver android:name=".reciver2" />
+    </application>
+
+</manifest>

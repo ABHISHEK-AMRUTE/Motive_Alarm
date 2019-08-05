@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0723DD</color>
+    <color name="colorPrimaryDark">#041AB9</color>
+    <color name="colorAccent">#FF5252</color>
+    <color name="colorred">#F14444</color>
+    <color name="online">#18EF33</color>
+    <color name="offline">#F37A7A</color>
+    <color name="back_of_set_alarm">#0067CA</color>
+    <color name="text_of_timr">#0A006D</color>
+    <color name="name_of_alarm">#FFFFFF</color>
+    <color name="shadow">#DD0C0C0C</color>
+    <color name="viewpager">#2A57EA</color>
+    <color name="dots">#9AFFFFFF</color>
+    <color name="dotswh">#FFFFFF</color>
+</resources>
