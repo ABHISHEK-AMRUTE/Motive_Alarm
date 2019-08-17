@@ -30,7 +30,10 @@ String level_of_math="level_of_math";
        editText=findViewById(R.id.editText4);
         setprob=findViewById(R.id.setproblem);
         editText1=findViewById(R.id.editText51);
-       set=findViewById(R.id.set); submit=findViewById(R.id.sbubmit);
+       set=findViewById(R.id.set);
+       submit=findViewById(R.id.sbubmit);
+        SharedPreferences a1 =getSharedPreferences(numberofprobl,MODE_PRIVATE);
+        editText1.setText(""+a1.getInt("numb_prob",2));
         SharedPreferences timed =getSharedPreferences(timedelay,MODE_PRIVATE);
         int ti=timed.getInt("time_delay",15);
         editText.setText(ti+"");
@@ -84,6 +87,8 @@ String level_of_math="level_of_math";
                 editor23.apply();
                 InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(editText.getWindowToken(), 0);
+                Toast.makeText(settings.this,"Done!",Toast.LENGTH_LONG).show();
+
 
             }
         });
