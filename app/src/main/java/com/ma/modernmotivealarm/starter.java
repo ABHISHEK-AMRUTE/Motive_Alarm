@@ -33,7 +33,7 @@ public class starter extends AppCompatActivity {
                 startActivity(in);
                 finish();
             }
-        }, SPLASH_TIME_OUT);
+        }, 0);
 
         }
 

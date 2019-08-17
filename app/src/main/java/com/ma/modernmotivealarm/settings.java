@@ -16,7 +16,7 @@ import android.widget.Toast;
 public class settings extends AppCompatActivity {
 RadioButton hard,easy;
 EditText editText,editText1;
-    String numberofprobl ="numberofprob";
+String numberofprobl ="numberofprob";
 Button set,submit,setprob;
 String level_of_math="level_of_math";
     String timedelay="time_delay";
