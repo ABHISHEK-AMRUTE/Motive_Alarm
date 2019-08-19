@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/back_of_set_alarm"
+    android:background="@drawable/backgroundgradient"
     tools:context=".setalarm">
 
     <ScrollView
@@ -13,7 +13,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
-        android:background="@color/back_of_set_alarm"
+        android:background="@drawable/backgroundgradient"
         ads:layout_constraintBottom_toTopOf="@+id/adview3"
         ads:layout_constraintHorizontal_bias="1.0"
         ads:layout_constraintVertical_bias="0.0"
@@ -47,9 +47,9 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginStart="84dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="84dp"
+                android:layout_marginStart="83dp"
+                android:layout_marginTop="254dp"
+                android:layout_marginEnd="85dp"
                 android:fontFamily="sans-serif"
                 android:text="MOTIVE ALARM"
                 android:textAlignment="center"
@@ -94,17 +94,6 @@
                 android:textSize="40sp"
                 android:textStyle="bold" />
 
-            <View
-                android:id="@+id/divider2"
-                android:layout_width="395dp"
-                android:layout_height="1dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="11dp"
-                android:background="#FFFFFF"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
             <TextView
                 android:id="@+id/textView20"
                 android:layout_width="match_parent"
@@ -123,7 +112,7 @@
             <VideoView
                 android:id="@+id/v564ideoView1313"
                 android:layout_width="match_parent"
-                android:layout_height="1000dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/textView20"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"

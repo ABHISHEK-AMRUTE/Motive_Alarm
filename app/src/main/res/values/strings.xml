@@ -25,8 +25,8 @@ Note: the Alarm will not be dismissed until you solve a math problem over the sc
 
     <string name="hello_world">Hello world!</string>
 
-    <string name="banner_ad_unit_id">ca-app-pub-2605690072930758/1743334735</string>
-    <string name="interstial_ad_unit_id">ca-app-pub-2605690072930758/9772662710</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="interstial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
 
 
 </resources>

@@ -18,7 +18,8 @@ import android.widget.Toast;
 import android.widget.VideoView;
 
 public class setalarm extends AppCompatActivity implements  Dialogfor_time_pickiing.take_the_time ,dialog_name.exampledialoglistner  {
-     Button setname,settime,changevideo;
+     Button changevideo;
+     //setname,settime,
      ImageButton bt,bt2;
     String name="MOTIVE ALARM",mode="offline",pathon="uhuhiuh",pathoff;
     TextView name_field,show_time;
@@ -34,8 +35,8 @@ public class setalarm extends AppCompatActivity implements  Dialogfor_time_picki
         setContentView(R.layout.activity_setalarm);
       name_field = findViewById(R.id.textView11);
       changevideo=findViewById(R.id.changevideo);
-      settime=findViewById(R.id.timeedit);
-        setname =findViewById(R.id.nameedit);
+     // settime=findViewById(R.id.timeedit);
+        //setname =findViewById(R.id.nameedit);
         vv=findViewById(R.id.v564ideoView1313);
         bt=findViewById(R.id.ageBu);
         bt2=findViewById(R.id.ageBu1);
@@ -69,12 +70,12 @@ public class setalarm extends AppCompatActivity implements  Dialogfor_time_picki
                 putdataandgo();
             }
         });
-        setname.setOnClickListener(new View.OnClickListener() {
+       /* setname.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 opendialog();
             }
-        });
+        });*/
         name_field.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,19 +90,19 @@ public class setalarm extends AppCompatActivity implements  Dialogfor_time_picki
             }
         });
 
-        settime.setOnClickListener(new View.OnClickListener() {
+       /* settime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 opendialog_for_time();
             }
-        });
+        });*/
          changevideo.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
                  chooseVideoFromGallary();
              }
          });
-       //
+
 
 bt2.setOnClickListener(new View.OnClickListener() {
     @Override

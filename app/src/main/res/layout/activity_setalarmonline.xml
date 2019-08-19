@@ -10,7 +10,7 @@
         android:id="@+id/scrollView5"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/back_of_set_alarm"
+        android:background="@drawable/backgroundgradient"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -22,18 +22,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <Button
-                android:id="@+id/nameedit2"
-                android:layout_width="18dp"
-                android:layout_height="17dp"
-                android:layout_alignTop="@+id/textView112"
-                android:layout_marginStart="33dp"
-                android:layout_marginTop="11dp"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:layout_toEndOf="@+id/textView112"
-                android:background="@drawable/edit" />
-
             <ImageView
                 android:id="@+id/imageView92"
                 android:layout_width="213dp"
@@ -43,10 +31,10 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="99dp"
                 android:layout_marginTop="9dp"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
                 android:layout_marginEnd="99dp"
-                android:background="@drawable/ci" />
+                android:background="@drawable/ci"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground" />
 
             <TextView
                 android:id="@+id/textView142"
@@ -66,8 +54,6 @@
             <TextView
                 android:id="@+id/textView112"
                 android:layout_width="239dp"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/imageView92"
                 android:layout_alignStart="@+id/imageView92"
@@ -75,7 +61,9 @@
                 android:layout_marginStart="-35dp"
                 android:layout_marginTop="0dp"
                 android:layout_marginEnd="-39dp"
+                android:clickable="true"
                 android:fontFamily="sans-serif"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:text="MOTIVE ALARM"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
@@ -109,27 +97,15 @@
                 android:layout_alignBottom="@+id/imageView92"
                 android:layout_marginStart="27dp"
                 android:layout_marginTop="64dp"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
                 android:layout_marginEnd="27dp"
                 android:layout_marginBottom="65dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:text="00:00"
                 android:textAlignment="center"
                 android:textColor="@color/text_of_timr"
                 android:textSize="40sp"
                 android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/timeedit2"
-                android:layout_width="32dp"
-                android:layout_height="30dp"
-                android:layout_alignStart="@+id/textView52"
-                android:layout_alignTop="@+id/textView112"
-                android:layout_alignEnd="@+id/textView52"
-                android:layout_marginStart="132dp"
-                android:layout_marginTop="-107dp"
-                android:layout_marginEnd="-5dp"
-                android:background="@drawable/edit" />
 
             <View
                 android:id="@+id/divider22"
@@ -187,11 +163,11 @@
                 android:layout_alignEnd="@+id/v564ideoView13132"
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="4dp"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
                 android:layout_marginEnd="15dp"
                 android:background="@drawable/bu"
+                android:clickable="true"
                 android:elevation="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:shadowColor="@color/shadow"
                 android:text="CHOOSE/CHANGE THE VIDEO" />
 

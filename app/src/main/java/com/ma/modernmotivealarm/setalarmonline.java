@@ -23,7 +23,8 @@ import com.google.android.youtube.player.YouTubePlayerView;
 
 
 public class setalarmonline extends YouTubeBaseActivity   {
-    Button setname,settime,changevideo;
+    Button changevideo;
+    //setname,settime
     ImageButton bt,bt2;
     String name="MOTIVE ALARM",mode="offline",pathon="moGTAWG8yHo",pathoff;
     TextView name_field,show_time;
@@ -51,8 +52,8 @@ public class setalarmonline extends YouTubeBaseActivity   {
         setContentView(R.layout.activity_setalarmonline);
         name_field = findViewById(R.id.textView112);
         changevideo=findViewById(R.id.changevideo2);
-        settime=findViewById(R.id.timeedit2);
-        setname =findViewById(R.id.nameedit2);
+        //settime=findViewById(R.id.timeedit2);
+       // setname =findViewById(R.id.nameedit2);
         show_time=findViewById(R.id.textView52);
         vv=findViewById(R.id.v564ideoView13132);
         bt=findViewById(R.id.ageBu2);
@@ -170,7 +171,7 @@ public class setalarmonline extends YouTubeBaseActivity   {
                 gettimee();
             }
         });
-        settime.setOnClickListener(new View.OnClickListener() {
+       /* settime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 gettimee();
@@ -180,7 +181,7 @@ public class setalarmonline extends YouTubeBaseActivity   {
             public void onClick(View v) {
                 gettimee();
             }
-        });
+        });*/
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

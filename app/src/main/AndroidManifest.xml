@@ -47,7 +47,8 @@
             android:name=".wakemeup_youtube"
             android:label="Wake up!!"
             android:screenOrientation="portrait" />
-        <activity android:name=".showmyalarmoffline" />
+        <activity android:name=".showmyalarmoffline"
+            android:theme="@style/Theme.AppCompat.light.fffff"/>
         <activity android:name=".gettime"
             android:theme="@style/Theme.AppCompat.light.fffff"/>
         <activity android:name=".getlink"

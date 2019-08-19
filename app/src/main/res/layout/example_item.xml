@@ -3,15 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="8dp"
+    android:layout_marginLeft="0dp"
     android:layout_marginTop="4dp"
-    android:layout_marginRight="8dp"
+    android:layout_marginRight="0dp"
+    android:layout_marginBottom="4dp"
     android:clickable="true"
     android:foreground="?android:attr/selectableItemBackground"
-    android:layout_marginBottom="4dp"
-    app:cardBackgroundColor="#F1F1FC"
-    app:cardCornerRadius="17dp"
-    app:cardElevation="10dp">
+    app:cardBackgroundColor="#86FFFFFF"
+    app:cardElevation="5dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -23,10 +22,10 @@
         <ImageView
             android:id="@+id/imageView5"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="16dp"
             android:layout_alignTop="@+id/mode_text"
-            android:layout_marginStart="13dp"
-            android:layout_marginTop="-2dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="1dp"
             android:layout_toEndOf="@+id/mode_text"
             app:srcCompat="@drawable/of" />
 
@@ -48,7 +47,7 @@
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="#000000"
-            android:textSize="47dp" />
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/textView3"
@@ -68,16 +67,16 @@
 
         <Switch
             android:id="@+id/switch1"
-            android:layout_width="129dp"
-            android:layout_height="39dp"
+            android:layout_width="107dp"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/divider4"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="7dp"
+            android:layout_marginTop="1dp"
             android:layout_marginEnd="10dp"
-            android:layout_marginBottom="1dp"
+            android:layout_marginBottom="0dp"
             android:text="OFF"
-            android:textColor="#E6000000"
-            android:textSize="18sp" />
+            android:textColor="#000000"
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/take_id"
@@ -98,13 +97,13 @@
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/switch1"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="9dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="1dp"
             android:layout_marginBottom="0dp"
             android:text="OFFLINE"
             android:textAlignment="center"
             android:textColor="#000000"
-            android:textSize="18sp" />
+            android:textSize="12sp" />
 
         <ImageView
             android:id="@+id/imageView4"

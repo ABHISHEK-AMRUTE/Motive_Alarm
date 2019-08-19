@@ -40,4 +40,5 @@ dependencies {
     implementation files('libs/YouTubeAndroidPlayerApi.jar')
     implementation 'androidx.viewpager:viewpager:1.0.0'
 
+
 }
