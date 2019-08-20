@@ -6,20 +6,26 @@ import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 public class setalarm extends AppCompatActivity implements  Dialogfor_time_pickiing.take_the_time ,dialog_name.exampledialoglistner  {
      Button changevideo;
-     //setname,settime,
+
      ImageButton bt,bt2;
     String name="MOTIVE ALARM",mode="offline",pathon="uhuhiuh",pathoff;
     TextView name_field,show_time;
@@ -29,19 +35,29 @@ public class setalarm extends AppCompatActivity implements  Dialogfor_time_picki
     VideoView vv;
     Switch sw;
     int id,flag;
+    ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setalarm);
       name_field = findViewById(R.id.textView11);
       changevideo=findViewById(R.id.changevideo);
-     // settime=findViewById(R.id.timeedit);
-        //setname =findViewById(R.id.nameedit);
+        AdView adView = findViewById(R.id.adView11);
+        AdRequest adRequest = new AdRequest.Builder()
+                .setRequestAgent("android_studio:ad_template").build();
+        adView.loadAd(adRequest);
         vv=findViewById(R.id.v564ideoView1313);
         bt=findViewById(R.id.ageBu);
         bt2=findViewById(R.id.ageBu1);
         sw= findViewById(R.id.switch2);
         show_time = findViewById(R.id.textView5);
+        imageView=findViewById(R.id.imageView9);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                opendialog_for_time();
+            }
+        });
         load_if_edit();
         yesdoit();
 
@@ -70,18 +86,15 @@ public class setalarm extends AppCompatActivity implements  Dialogfor_time_picki
                 putdataandgo();
             }
         });
-       /* setname.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                opendialog();
-            }
-        });*/
-        name_field.setOnClickListener(new View.OnClickListener() {
+
+        ConstraintLayout cn =findViewById(R.id.touchmename);
+        cn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 opendialog();
             }
         });
+
 
         show_time.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,12 +103,7 @@ public class setalarm extends AppCompatActivity implements  Dialogfor_time_picki
             }
         });
 
-       /* settime.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                opendialog_for_time();
-            }
-        });*/
+
          changevideo.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {

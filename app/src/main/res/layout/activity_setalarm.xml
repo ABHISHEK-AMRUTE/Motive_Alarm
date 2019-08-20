@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundgradient"
     tools:context=".setalarm">
@@ -18,193 +19,296 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
-
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/imageView9"
-                android:layout_width="213dp"
-                android:layout_height="184dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="99dp"
-                android:layout_marginTop="66dp"
-                android:layout_marginEnd="99dp"
-                android:background="@drawable/ci"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
 
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="91dp"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageButton
+                    android:id="@+id/ageBu1"
+                    android:layout_width="57dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:tint="#FFFFFF"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/k" />
+
+                <ImageButton
+                    android:id="@+id/ageBu"
+                    android:layout_width="57dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/ic_done_black_24dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:tint="#00E4D2D2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/ci"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:text="00:00"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_of_timr"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView9"
+                    app:layout_constraintStart_toStartOf="@+id/imageView9"
+                    app:layout_constraintTop_toTopOf="@+id/imageView9" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/divider2"
-                android:layout_alignStart="@+id/divider2"
-                android:layout_marginStart="2dp"
-                android:layout_marginTop="31dp"
-                android:fontFamily="Segoe UI"
-                android:text="MODE"
-                android:textAlignment="textEnd"
-                android:textColor="#FFFFFF"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="4dp"
+                app:cardBackgroundColor="@android:color/transparent">
 
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="239dp"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/touchmename"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageView18"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/tag"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView32" />
+
+                    <TextView
+                        android:id="@+id/textView32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Label"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/imageView18"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="8dp"
+                        android:clickable="true"
+                        android:fontFamily="sans-serif"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:text="MOTIVE ALARM"
+                        android:textAlignment="textStart"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/textView32"
+                        app:layout_constraintTop_toBottomOf="@+id/textView32" />
+                   </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/imageView9"
-                android:layout_alignStart="@+id/imageView9"
-                android:layout_alignEnd="@+id/imageView9"
-                android:layout_marginStart="-35dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="-39dp"
-                android:clickable="true"
-                android:fontFamily="sans-serif"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:text="MOTIVE ALARM"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                app:cardBackgroundColor="@android:color/transparent">
 
-            <TextView
-                android:id="@+id/textView15"
-                android:layout_width="168dp"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageView19"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/video"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView142" />
+
+                    <TextView
+                        android:id="@+id/textView142"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="Segoe UI"
+                        android:text="MODE"
+                        android:textAlignment="textStart"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/imageView19"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView152"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="Segoe UI"
+                        android:text="OFFLINE"
+                        android:textAlignment="center"
+                        android:textColor="@color/offline"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/textView142"
+                        app:layout_constraintTop_toBottomOf="@+id/textView142" />
+
+                    <Switch
+                        android:id="@+id/switch2"
+                        android:layout_width="45dp"
+                        android:layout_height="25dp"
+                        app:layout_constraintEnd_toEndOf="@+id/textView28"
+                        app:layout_constraintStart_toStartOf="@+id/textView28"
+                        app:layout_constraintTop_toTopOf="@+id/textView142" />
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="Toggle this for online mode"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/switch2" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/switch2"
-                android:layout_marginStart="14dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginEnd="0dp"
-                android:layout_toStartOf="@+id/switch2"
-                android:layout_toEndOf="@+id/textView14"
-                android:fontFamily="Segoe UI"
-                android:text="OFFLINE"
-                android:textAlignment="center"
-                android:textColor="@color/offline"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="4dp"
+                app:cardBackgroundColor="@android:color/transparent">
 
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="55dp"
-                android:layout_alignStart="@+id/imageView9"
-                android:layout_alignTop="@+id/imageView9"
-                android:layout_alignEnd="@+id/imageView9"
-                android:layout_alignBottom="@+id/imageView9"
-                android:layout_marginStart="27dp"
-                android:layout_marginTop="64dp"
-                android:layout_marginEnd="27dp"
-                android:layout_marginBottom="65dp"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:text="00:00"
-                android:textAlignment="center"
-                android:textColor="@color/text_of_timr"
-                android:textSize="40sp"
-                android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-            <View
-                android:id="@+id/divider2"
-                android:layout_width="395dp"
-                android:layout_height="1dp"
-                android:layout_below="@+id/textView11"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="11dp"
-                android:background="#FFFFFF"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+                    <TextView
+                        android:id="@+id/textView202"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:text="OFFLINE VIDEO PREVIEW"
+                        android:textColor="#E8FFFFFF"
+                        android:textStyle="bold" />
 
-            <Switch
-                android:id="@+id/switch2"
-                android:layout_width="52dp"
+                    <VideoView
+                        android:id="@+id/v564ideoView1313"
+                        android:layout_width="match_parent"
+                        android:layout_height="1000dp"
+
+
+                        android:elevation="20dp"
+                        android:outlineAmbientShadowColor="@color/shadow"
+                        tools:layout_editor_absoluteX="5dp"
+                        tools:layout_editor_absoluteY="311dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/divider2"
-                android:layout_alignEnd="@+id/divider2"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="47dp" />
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                app:cardBackgroundColor="@android:color/transparent">
 
-            <TextView
-                android:id="@+id/textView20"
-                android:layout_width="202dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/changevideo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:clickable="true"
+                        android:elevation="10dp"
+                        android:text="CHOOSE/CHANGE THE VIDEO" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView15"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="7dp"
-                android:layout_marginTop="57dp"
-                android:text="OFFLINE VIDEO PREVIEW"
-                android:textColor="#E8FFFFFF"
-                android:textStyle="bold" />
+                android:orientation="vertical">
 
-            <VideoView
-                android:id="@+id/v564ideoView1313"
-                android:layout_width="wrap_content"
-                android:layout_height="1000dp"
-                android:layout_below="@+id/textView20"
+                <com.google.android.gms.ads.AdView
+                    android:id="@+id/adView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
 
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:visibility="visible"
+                    ads:adSize="BANNER"
+                    ads:adUnitId="@string/banner_ad_unit_id"
+                    ads:layout_constraintBottom_toBottomOf="parent"
+                    ads:layout_constraintEnd_toEndOf="parent"
+                    ads:layout_constraintStart_toStartOf="parent"
+                    ads:layout_constraintTop_toTopOf="parent"
+                    ads:layout_constraintVertical_bias="0.0"
+                    tools:visibility="visible">
 
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="6dp"
-                android:layout_marginBottom="0dp"
-                android:elevation="20dp"
-                android:outlineAmbientShadowColor="@color/shadow" />
-
-        </RelativeLayout>
+                </com.google.android.gms.ads.AdView>
+            </LinearLayout>
+        </LinearLayout>
     </ScrollView>
 
-    <ImageButton
-        android:id="@+id/ageBu1"
-        android:layout_width="57dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@android:color/transparent"
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground"
-        android:tint="#FFFFFF"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/k" />
-
-    <ImageButton
-        android:id="@+id/ageBu"
-        android:layout_width="57dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/ic_done_black_24dp"
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground"
-        android:tint="#00E4D2D2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/changevideo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/bu"
-        android:clickable="true"
-        android:elevation="10dp"
-        android:foreground="?android:attr/selectableItemBackground"
-        android:shadowColor="@color/shadow"
-        android:text="CHOOSE/CHANGE THE VIDEO"
-        app:layout_constraintBottom_toBottomOf="@+id/scrollView4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

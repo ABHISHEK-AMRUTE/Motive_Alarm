@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -18,185 +19,290 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/imageView92"
-                android:layout_width="213dp"
-                android:layout_height="184dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="99dp"
-                android:layout_marginTop="9dp"
-                android:layout_marginEnd="99dp"
-                android:background="@drawable/ci"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground" />
 
-            <TextView
-                android:id="@+id/textView142"
-                android:layout_width="91dp"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/ageBu12"
+                    android:layout_width="36dp"
+                    android:layout_height="31dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/k"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/ageBu2"
+                    android:layout_width="57dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/done"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@android:color/transparent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView92"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/ci"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView52"
+                    android:layout_width="120dp"
+                    android:layout_height="55dp"
+                    android:layout_marginBottom="8dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:text="00:00"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_of_timr"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView92"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView92"
+                    app:layout_constraintStart_toStartOf="@+id/imageView92"
+                    app:layout_constraintTop_toTopOf="@+id/imageView92" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/divider22"
-                android:layout_alignStart="@+id/divider22"
-                android:layout_marginStart="2dp"
-                android:layout_marginTop="31dp"
-                android:fontFamily="Segoe UI"
-                android:text="MODE"
-                android:textAlignment="textEnd"
-                android:textColor="#FFFFFF"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="4dp"
+                app:cardBackgroundColor="@android:color/transparent">
 
-            <TextView
-                android:id="@+id/textView112"
-                android:layout_width="239dp"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/touchmename"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageView18"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/tag"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView32" />
+
+                    <TextView
+                        android:id="@+id/textView32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Label"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/imageView18"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView112"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="8dp"
+                        android:clickable="true"
+                        android:fontFamily="sans-serif"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:text="MOTIVE ALARM"
+                        android:textAlignment="textStart"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/textView32"
+                        app:layout_constraintTop_toBottomOf="@+id/textView32" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/imageView92"
-                android:layout_alignStart="@+id/imageView92"
-                android:layout_alignEnd="@+id/imageView92"
-                android:layout_marginStart="-35dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="-39dp"
-                android:clickable="true"
-                android:fontFamily="sans-serif"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:text="MOTIVE ALARM"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:textSize="24sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView152"
-                android:layout_width="168dp"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/switch22"
-                android:layout_marginStart="14dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginEnd="0dp"
-                android:layout_toStartOf="@+id/switch22"
-                android:layout_toEndOf="@+id/textView142"
-                android:fontFamily="Segoe UI"
-                android:text="ONLINE"
-                android:textAlignment="center"
-                android:textColor="@color/online"
-                android:textSize="24sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView52"
-                android:layout_width="wrap_content"
-                android:layout_height="55dp"
-                android:layout_alignStart="@+id/imageView92"
-                android:layout_alignTop="@+id/imageView92"
-                android:layout_alignEnd="@+id/imageView92"
-                android:layout_alignBottom="@+id/imageView92"
-                android:layout_marginStart="27dp"
-                android:layout_marginTop="64dp"
-                android:layout_marginEnd="27dp"
-                android:layout_marginBottom="65dp"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:text="00:00"
-                android:textAlignment="center"
-                android:textColor="@color/text_of_timr"
-                android:textSize="40sp"
-                android:textStyle="bold" />
-
-            <View
-                android:id="@+id/divider22"
-                android:layout_width="395dp"
-                android:layout_height="1dp"
-                android:layout_below="@+id/textView112"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="11dp"
-                android:background="#FFFFFF"
-                app:layout_constraintTop_toBottomOf="@+id/textView112" />
-
-            <Switch
-                android:id="@+id/switch22"
-                android:layout_width="52dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/divider22"
-                android:layout_alignEnd="@+id/divider22"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="47dp" />
-
-            <TextView
-                android:id="@+id/textView202"
-                android:layout_width="202dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView152"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="7dp"
-                android:layout_marginTop="57dp"
-                android:text="ONLINE VIDEO PREVIEW"
-                android:textColor="#E8FFFFFF"
-                android:textStyle="bold" />
-
-            <com.google.android.youtube.player.YouTubePlayerView
-                android:id="@+id/v564ideoView13132"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView202"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginEnd="8dp"
-                android:elevation="20dp"
-                android:outlineAmbientShadowColor="@color/shadow" />
-
-            <Button
-                android:id="@+id/changevideo2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/v564ideoView13132"
-                android:layout_alignStart="@+id/v564ideoView13132"
-                android:layout_alignEnd="@+id/v564ideoView13132"
-                android:layout_marginStart="12dp"
+                android:layout_marginBottom="4dp"
                 android:layout_marginTop="4dp"
-                android:layout_marginEnd="15dp"
-                android:background="@drawable/bu"
-                android:clickable="true"
-                android:elevation="10dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:shadowColor="@color/shadow"
-                android:text="CHOOSE/CHANGE THE VIDEO" />
+                app:cardBackgroundColor="@android:color/transparent">
 
-        </RelativeLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageView19"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/video"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView142" />
+
+                    <TextView
+                        android:id="@+id/textView142"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="Segoe UI"
+                        android:text="MODE"
+                        android:textAlignment="textStart"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/imageView19"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView152"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="Segoe UI"
+                        android:text="ONLINE"
+                        android:textAlignment="center"
+                        android:textColor="@color/online"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/textView142"
+                        app:layout_constraintTop_toBottomOf="@+id/textView142" />
+
+                    <Switch
+                        android:id="@+id/switch22"
+                        android:layout_width="45dp"
+                        android:layout_height="25dp"
+                        app:layout_constraintEnd_toEndOf="@+id/textView28"
+                        app:layout_constraintStart_toStartOf="@+id/textView28"
+                        app:layout_constraintTop_toTopOf="@+id/textView142" />
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="Toggle this for offline mode"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/switch22" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="4dp"
+                app:cardBackgroundColor="@android:color/transparent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView202"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ONLINE VIDEO PREVIEW"
+                        android:textColor="#E8FFFFFF"
+                        android:textStyle="bold" />
+
+                    <com.google.android.youtube.player.YouTubePlayerView
+                        android:id="@+id/v564ideoView13132"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="20dp"
+                        android:outlineAmbientShadowColor="@color/shadow" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                app:cardBackgroundColor="@android:color/transparent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/changevideo2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:clickable="true"
+                        android:elevation="10dp"
+                        android:text="CHOOSE/CHANGE THE VIDEO" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+                <com.google.android.gms.ads.AdView
+                    android:id="@+id/adView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:visibility="visible"
+                    ads:adSize="BANNER"
+                    ads:adUnitId="@string/banner_ad_unit_id"
+                    ads:layout_constraintBottom_toBottomOf="parent"
+                    ads:layout_constraintEnd_toEndOf="parent"
+                    ads:layout_constraintStart_toStartOf="parent"
+                    ads:layout_constraintTop_toTopOf="parent"
+                    ads:layout_constraintVertical_bias="0.0"
+                    tools:visibility="visible">
+
+                </com.google.android.gms.ads.AdView>
+        </LinearLayout>
+        </LinearLayout>
     </ScrollView>
-
-    <ImageButton
-        android:id="@+id/ageBu12"
-        android:layout_width="36dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground"
-        android:background="@drawable/k"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/ageBu2"
-        android:layout_width="57dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground"
-        android:background="@drawable/done"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:color/transparent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

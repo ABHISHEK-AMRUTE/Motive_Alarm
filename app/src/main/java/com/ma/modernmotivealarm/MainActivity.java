@@ -22,6 +22,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -35,6 +37,8 @@ public class MainActivity extends AppCompatActivity
 
    String count_of_vi="count_of_vi",file_For_alarm="file_For_alarm";
    int count_of_alarms;
+   TextView fadeit;
+   ImageView fadde;
     private RecyclerView mrecu;
   int count=1;
     private exampleadapter madapter;
@@ -55,14 +59,19 @@ AdView mAdView;
                 "ca-app-pub-2605690072930758~2468887768");
 
         mAdView = findViewById(R.id.adView1111);
+
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+        fadde=findViewById(R.id.tofadeimage);
+        fadeit=findViewById(R.id.tofadeone);
          adt1 =getSharedPreferences("additional data",MODE_PRIVATE);
         loadData();
         edit_list_data();
          add_additional_data();
         saveData();
         loadData();
+
+        fade();
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -134,6 +143,7 @@ AdView mAdView;
 
                 examplelist.remove(position);
                 madapter.notifyItemRemoved(position);
+                fade();
             }
 
 
@@ -311,5 +321,21 @@ AdView mAdView;
     protected void onDestroy() {
         saveData();
         super.onDestroy();
+    }
+    public void fade()
+    {
+        if(examplelist.size()!=0)
+        {
+            fadeit.setVisibility(View.INVISIBLE);
+            fadde.setVisibility(View.INVISIBLE);
+            fadeit.setVisibility(View.GONE);
+            fadde.setVisibility(View.GONE);
+        }
+        else
+        {
+            fadeit.setVisibility(View.VISIBLE);
+            fadde.setVisibility(View.VISIBLE);
+
+        }
     }
 }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@drawable/backgroundgradient"
     tools:context=".settings">
 
 
@@ -24,8 +24,9 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="8dp"
-                app:cardBackgroundColor="#F5F5F7"
+               android:layout_marginTop="16dp"
+                android:layout_marginBottom="4dp"
+                app:cardBackgroundColor="@android:color/transparent"
                 app:cardCornerRadius="5dp"
                 app:cardElevation="7dp"
                 app:cardMaxElevation="10dp"
@@ -43,7 +44,7 @@
                         android:layout_margin="2dp"
                         android:text="Set time delay between triggering of alarm and starting of video playback"
                         android:textAlignment="center"
-                        android:textColor="#000000"
+                        android:textColor="#FFFEFE"
                         android:textSize="18sp" />
 
                     <LinearLayout
@@ -55,11 +56,13 @@
                             android:id="@+id/editText4"
                             android:layout_width="197dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="2dp"
+                            android:layout_marginStart="4dp"
                             android:ems="10"
+
                             android:hint="in seconds"
                             android:inputType="number"
-                            android:text="30" />
+                            android:text="30"
+                            android:textColor="#FFFFFF" />
 
                         <Button
                             android:id="@+id/set"
@@ -74,8 +77,9 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="8dp"
-                app:cardBackgroundColor="#F4F4F7"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                app:cardBackgroundColor="@android:color/transparent"
                 app:cardCornerRadius="5dp"
                 app:cardElevation="7dp"
                 app:cardMaxElevation="10dp"
@@ -93,7 +97,7 @@
                         android:layout_margin="2dp"
                         android:text="Set math problem level"
                         android:textAlignment="center"
-                        android:textColor="#F8020000"
+                        android:textColor="#FFFEFE"
                         android:textSize="18sp" />
 
                     <LinearLayout
@@ -105,7 +109,7 @@
                             android:id="@+id/radioButton"
                             android:layout_width="93dp"
                             android:layout_height="39dp"
-                            android:layout_marginStart="2dp"
+                            android:layout_marginStart="4dp"
                             android:checked="false"
                             android:text="HARD"
                             android:textAlignment="center"
@@ -117,6 +121,7 @@
                             android:layout_height="30dp"
                             android:layout_marginStart="8dp"
                             android:text="TYPE :- A+(B*C)"
+                            android:textColor="#D2CAC5C5"
                             android:textSize="18sp" />
 
                     </LinearLayout>
@@ -130,7 +135,7 @@
                             android:id="@+id/radioButton2"
                             android:layout_width="93dp"
                             android:layout_height="39dp"
-                            android:layout_marginStart="2dp"
+                            android:layout_marginStart="4dp"
                             android:checked="true"
                             android:text="EASY"
                             android:textAlignment="center"
@@ -142,6 +147,7 @@
                             android:layout_height="30dp"
                             android:layout_marginStart="8dp"
                             android:text="TYPE :- A+B+C"
+                            android:textColor="#D2CAC5C5"
                             android:textSize="18sp" />
                     </LinearLayout>
 
@@ -151,8 +157,9 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="8dp"
-                app:cardBackgroundColor="#F4F4F7"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                app:cardBackgroundColor="@android:color/transparent"
                 app:cardCornerRadius="5dp"
                 app:cardElevation="7dp"
                 app:cardMaxElevation="10dp"
@@ -170,7 +177,7 @@
                         android:layout_margin="2dp"
                         android:text="Set number of math problem level"
                         android:textAlignment="center"
-                        android:textColor="#000000"
+                        android:textColor="#FFFEFE"
                         android:textSize="18sp" />
 
                     <LinearLayout
@@ -182,10 +189,11 @@
                             android:id="@+id/editText51"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="2dp"
+                            android:layout_marginStart="4dp"
                             android:ems="10"
                             android:inputType="number"
-                            android:text="2" />
+                            android:text="2"
+                            android:textColor="#FDFFFFFF" />
 
                         <Button
                             android:id="@+id/setproblem"
@@ -206,8 +214,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        app:cardCornerRadius="5dp"
+        app:cardBackgroundColor="@android:color/transparent"
 
+        app:cardCornerRadius="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">

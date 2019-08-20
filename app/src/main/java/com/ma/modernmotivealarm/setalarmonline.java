@@ -4,6 +4,7 @@ import android.app.ListActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
@@ -12,10 +13,13 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
@@ -33,6 +37,7 @@ public class setalarmonline extends YouTubeBaseActivity   {
     config bh;
     int hour=0;
     int minute=0;
+    ImageView imageView;
     FragmentManager fg;
     Switch sw;
     int id,flag;
@@ -50,15 +55,32 @@ public class setalarmonline extends YouTubeBaseActivity   {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setalarmonline);
+        AdView adView = findViewById(R.id.adView11);
+        AdRequest adRequest = new AdRequest.Builder()
+                .setRequestAgent("android_studio:ad_template").build();
+        adView.loadAd(adRequest);
         name_field = findViewById(R.id.textView112);
         changevideo=findViewById(R.id.changevideo2);
-        //settime=findViewById(R.id.timeedit2);
-       // setname =findViewById(R.id.nameedit2);
+       ConstraintLayout cn;
+       cn=findViewById(R.id.touchmename);
+       cn.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               gettimee();
+
+           }
+       });
         show_time=findViewById(R.id.textView52);
         vv=findViewById(R.id.v564ideoView13132);
         bt=findViewById(R.id.ageBu2);
         bt2=findViewById(R.id.ageBu12);
         sw= findViewById(R.id.switch22);
+        imageView=findViewById(R.id.imageView92);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+             gettimee(); }
+        });
         sw.setChecked(true);
         bt2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -159,12 +181,7 @@ public class setalarmonline extends YouTubeBaseActivity   {
 
 
 
-            name_field.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                          gettimee();
-            }
-        });
+
         show_time.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

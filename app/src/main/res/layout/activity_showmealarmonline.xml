@@ -11,6 +11,7 @@
     tools:context=".setalarm">
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         ads:layout_constraintBottom_toBottomOf="parent"
@@ -29,7 +30,7 @@
 
                 <ImageButton
                     android:id="@+id/imageButton1"
-                    android:layout_width="40dp"
+                    android:layout_width="34dp"
                     android:layout_height="34dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
@@ -68,125 +69,189 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:elevation="2dp"
-                ads:cardBackgroundColor="@android:color/transparent">
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="2dp"
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/textView111"
-                        android:layout_width="match_parent"
-                        android:layout_height="59dp"
-                        android:fontFamily="sans-serif"
-                        android:gravity="center_vertical"
-                        android:text="MOTIVE ALARM"
-                        android:textAlignment="center"
-                        android:textColor="#FFFFFF"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:elevation="2dp"
                 ads:cardBackgroundColor="@android:color/transparent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/linearLayout2"
                     android:layout_width="match_parent"
-                    android:layout_height="59dp">
+                    android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/textView24"
+                        android:id="@+id/textView23"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
+                        android:layout_marginStart="24dp"
                         android:layout_marginTop="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:gravity="center_vertical"
-                        android:text="Time"
+                        android:text="Label"
                         android:textColor="#FFFFFF"
-                        android:textSize="24sp"
+                        android:textSize="18sp"
                         android:textStyle="bold"
-                        ads:layout_constraintBottom_toBottomOf="parent"
-                        ads:layout_constraintStart_toStartOf="parent"
+                        ads:layout_constraintStart_toEndOf="@+id/imageView14"
                         ads:layout_constraintTop_toTopOf="parent" />
 
-                    <TextView
-                        android:id="@+id/textView51"
-                        android:layout_width="wrap_content"
-                        android:layout_height="48dp"
+                    <ImageView
+                        android:id="@+id/imageView14"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="16dp"
                         android:layout_marginTop="8dp"
-                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/tag"
+                        ads:layout_constraintStart_toStartOf="parent"
+                        ads:layout_constraintTop_toTopOf="@+id/textView23" />
+
+                    <TextView
+                        android:id="@+id/textView111"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
                         android:layout_marginBottom="8dp"
+                        android:fontFamily="sans-serif"
                         android:gravity="center_vertical"
-                        android:text="00:00"
-                        android:textAlignment="center"
-                        android:textColor="#F8F6F6"
-                        android:textSize="36sp"
+                        android:text="MOTIVE ALARM"
+
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
                         ads:layout_constraintBottom_toBottomOf="parent"
                         ads:layout_constraintEnd_toEndOf="parent"
-                        ads:layout_constraintTop_toTopOf="parent" />
+                        ads:layout_constraintHorizontal_bias="0.0"
+                        ads:layout_constraintStart_toStartOf="@+id/textView23"
+                        ads:layout_constraintTop_toBottomOf="@+id/textView23" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:elevation="2dp"
 
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
                 ads:cardBackgroundColor="@android:color/transparent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="65dp">
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/time"
+                        ads:layout_constraintStart_toStartOf="parent"
+                        ads:layout_constraintTop_toTopOf="@+id/textView24" />
+
+                    <TextView
+                        android:id="@+id/textView24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center_vertical"
+                        android:text="Time"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        ads:layout_constraintBottom_toBottomOf="parent"
+                        ads:layout_constraintStart_toEndOf="@+id/imageView"
+                        ads:layout_constraintTop_toTopOf="parent"
+                        ads:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/textView51"
+                        android:layout_width="152dp"
+                        android:layout_height="26dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="top|left"
+                        android:text="00:00"
+
+                        android:textColor="#F8F6F6"
+                        android:textSize="14sp"
+                        ads:layout_constraintBottom_toBottomOf="parent"
+                        ads:layout_constraintStart_toStartOf="@+id/textView24"
+                        ads:layout_constraintTop_toBottomOf="@+id/textView24"
+                        ads:layout_constraintVertical_bias="0.0" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="1dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
+                ads:cardBackgroundColor="@android:color/transparent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageView13"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="4dp"
+                        android:src="@drawable/video"
+                        ads:layout_constraintStart_toStartOf="parent"
+                        ads:layout_constraintTop_toTopOf="@+id/textView141" />
 
                     <TextView
                         android:id="@+id/textView141"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
+                        android:layout_marginStart="24dp"
                         android:layout_marginBottom="8dp"
                         android:fontFamily="Segoe UI"
                         android:gravity="center_vertical"
                         android:text="Mode"
                         android:textAlignment="center"
                         android:textColor="#FFFFFF"
-                        android:textSize="24sp"
+                        android:textSize="18sp"
                         android:textStyle="bold"
                         ads:layout_constraintBottom_toBottomOf="parent"
-                        ads:layout_constraintStart_toStartOf="parent"
-                        ads:layout_constraintTop_toTopOf="parent" />
+                        ads:layout_constraintStart_toEndOf="@+id/imageView13"
+                        ads:layout_constraintTop_toTopOf="parent"
+                        ads:layout_constraintVertical_bias="0.277" />
 
                     <TextView
                         android:id="@+id/textView151"
-                        android:layout_width="wrap_content"
-                        android:layout_height="29dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_width="83dp"
+                        android:layout_height="26dp"
                         android:layout_marginBottom="8dp"
                         android:fontFamily="Segoe UI"
                         android:gravity="center_vertical"
                         android:text="ONLINE"
-                        android:textAlignment="center"
+
                         android:textColor="@color/online"
-                        android:textSize="24sp"
+                        android:textSize="14sp"
                         android:textStyle="bold"
                         ads:layout_constraintBottom_toBottomOf="parent"
-                        ads:layout_constraintEnd_toEndOf="parent"
-                        ads:layout_constraintTop_toTopOf="parent"
-                        ads:layout_constraintVertical_bias="0.4" />
+                        ads:layout_constraintStart_toStartOf="@+id/textView141"
+                        ads:layout_constraintTop_toBottomOf="@+id/textView141"
+                        ads:layout_constraintVertical_bias="1.0" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:elevation="2dp"
+                android:elevation="1dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
                 ads:cardBackgroundColor="@android:color/transparent">
 
                 <LinearLayout
@@ -198,6 +263,8 @@
                         android:id="@+id/textView201"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
                         android:text="ONLINE VIDEO PREVIEW"
                         android:textColor="#E8FFFFFF"
                         android:textStyle="bold" />
@@ -215,7 +282,11 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:elevation="2dp"
+                android:elevation="1dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
                 ads:cardBackgroundColor="@android:color/transparent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -227,7 +298,8 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
 
-                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
                         android:visibility="visible"
                         ads:adSize="BANNER"
                         ads:adUnitId="@string/banner_ad_unit_id"

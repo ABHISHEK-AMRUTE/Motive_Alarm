@@ -11,6 +11,7 @@ import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 
 public class getlink extends AppCompatActivity {
@@ -47,35 +48,36 @@ Button bt,brow;
             public void onClick(View v) {
 
 
+                String st = ed.getText().toString();
+                if (st.matches("")) {
+                    Toast.makeText(getlink.this,"Please insert a link..",Toast.LENGTH_LONG).show();
+                }
+                else
+                {
+                    int flag = 0;
+                    for (int x = 0; x < st.length(); x++) {
+                        if (st.charAt(x) == '=') {
+                            flag = 1;
+                        }
+                    }
+                    if (flag == 1)
+                        st = st.substring(st.indexOf("=") + 1);
+
+                    else {
+                        for (int x = 0; x < 3; x++)
+                            st = st.substring(st.indexOf("/") + 1);
+                    }
 
 
-                 String st=ed.getText().toString();
-                 int flag=0;
-                 for(int x=0;x<st.length();x++)
-                 {
-                     if(st.charAt(x)=='=')
-                     {
-                         flag=1;
-                     }
-                 }
-                 if(flag==1)
-                 st=st.substring(st.indexOf("=")+1);
+                    Intent in = new Intent(getlink.this, setalarmonline.class);
 
-                 else
-                 {  for(int x=0;x<3;x++)
-                     st=st.substring(st.indexOf("/")+1);
-                 }
-
-
-
-                Intent in=new Intent(getlink.this,setalarmonline.class);
-
-                in.putExtra("name", getIntent().getStringExtra("name"));
-                in.putExtra("hour", getIntent().getIntExtra("hour",0));
-                in.putExtra("minute", getIntent().getIntExtra("minute",0));
-                in.putExtra("id",getIntent().getStringExtra("id"));
-                in.putExtra("onlinepath",st);
-                startActivity(in);
+                    in.putExtra("name", getIntent().getStringExtra("name"));
+                    in.putExtra("hour", getIntent().getIntExtra("hour", 0));
+                    in.putExtra("minute", getIntent().getIntExtra("minute", 0));
+                    in.putExtra("id", getIntent().getStringExtra("id"));
+                    in.putExtra("onlinepath", st);
+                    startActivity(in);
+                }
             }
         });
     }
