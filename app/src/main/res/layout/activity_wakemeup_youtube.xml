@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/back_of_set_alarm"
+    android:background="@drawable/backgroundgradient"
     tools:context=".wakemeup_youtube">
 
     <ScrollView
@@ -29,7 +29,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="0dp"
-                android:layout_marginTop="0dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="0dp"
                 tools:layout_editor_absoluteY="8dp">
 
@@ -79,7 +79,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/bu"
         android:onClick="stopservice"
         android:text="submit"
         app:layout_constraintBottom_toBottomOf="parent"

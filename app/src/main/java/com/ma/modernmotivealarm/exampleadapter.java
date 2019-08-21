@@ -6,9 +6,11 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.SystemClock;
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -53,7 +55,7 @@ public class exampleadapter extends RecyclerView.Adapter<exampleadapter.Examplev
         public TextView time,text1,text2,id;
         public Switch sw;
         TextView mode_text;
-
+CardView cd;
         ImageView vv,delete;
 
         public Exampleviewholder(@NonNull View itemView, final OnitemClickListner listner) {
@@ -64,6 +66,7 @@ public class exampleadapter extends RecyclerView.Adapter<exampleadapter.Examplev
              vv=itemView.findViewById(R.id.imageView5);
             delete=itemView.findViewById(R.id.imageView4);
               mode_text= itemView.findViewById(R.id.mode_text);
+              cd= itemView.findViewById(R.id.cardviewone);
             sw=itemView.findViewById(R.id.switch1);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -121,11 +124,13 @@ public class exampleadapter extends RecyclerView.Adapter<exampleadapter.Examplev
         final example_item currentitem =mexamplelist.get(i);
         //////////////setting switch ////////////////
         if(currentitem.getState()==0)
-        {
+        {    holder.cd.setCardBackgroundColor(Color.parseColor("#86FFFFFF"));
+
             holder.sw.setChecked(false);
             holder.sw.setText("OFF");
         }
         else {
+            holder.cd.setCardBackgroundColor(Color.parseColor("#F2FFFFFF"));
             holder.sw.setChecked(true);
             holder.sw.setText("ON");
         }
@@ -173,15 +178,10 @@ public class exampleadapter extends RecyclerView.Adapter<exampleadapter.Examplev
 
                 AlarmManager alarmManager  = (AlarmManager) buttonView.getContext().getSystemService(buttonView.getContext().ALARM_SERVICE);
 
-                   /* AlarmManager alarmManager  = (AlarmManager) buttonView.getContext().getSystemService(buttonView.getContext().ALARM_SERVICE);
 
-                   1. take time from the time text
-                   2. calculate milli from current time and set alarm
-                   3. change colour of the bar
-                   4. i.e. change shared preference using id
-                  */
                     if(isChecked)
-                    {   holder.sw.setText("ON");
+                    {   holder.cd.setCardBackgroundColor(buttonView.getResources().getColor(R.color.darkalarm));
+                        holder.sw.setText("ON");
                         currentitem.setState(1);
                         int hour = currentitem.gethour();
                         int minute =currentitem.getminute();
@@ -212,7 +212,21 @@ public class exampleadapter extends RecyclerView.Adapter<exampleadapter.Examplev
                            millisec = millisec +((60-current_minute)+(minute))*60*1000;
                            millisec =millisec  - (60*60*1000);
                        }
-
+                       if(hour==current_hour)
+                       { millisec=0;
+                           if(minute==current_minute)
+                           {
+                               millisec = 60*1000;
+                           }
+                           else if(minute<current_minute)
+                           {
+                               millisec =24*60*60*1000 - (60-minute)*60*1000;
+                           }
+                           else if(minute>current_minute)
+                           {
+                               millisec= millisec + ((minute-current_minute)*60*1000);
+                           }
+                       }
 
 
                          currentitem.setid(millisec);
@@ -247,7 +261,9 @@ public class exampleadapter extends RecyclerView.Adapter<exampleadapter.Examplev
 
                     }
                     else
-                    {   Toast.makeText(buttonView.getContext(),"!!ALARM CANCELLED!!",Toast.LENGTH_LONG).show();
+                    {    holder.cd.setCardBackgroundColor(buttonView.getResources().getColor(R.color.lightalarm));
+
+                        Toast.makeText(buttonView.getContext(),"!!ALARM CANCELLED!!",Toast.LENGTH_LONG).show();
                         holder.sw.setText("OFF");
                         currentitem.setState(0);
                         int code= currentitem.getId();

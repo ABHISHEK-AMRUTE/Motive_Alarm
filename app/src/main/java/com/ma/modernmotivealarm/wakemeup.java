@@ -44,7 +44,7 @@ public class wakemeup extends AppCompatActivity {
     Uri  mImageUri;
     String numberofprobl ="numberofprob";
     int count_of_problems=2;
-    int flag_overview=0;
+
     CountDownTimer cou;
     String level_of_math="level_of_math";
     EditText  get;

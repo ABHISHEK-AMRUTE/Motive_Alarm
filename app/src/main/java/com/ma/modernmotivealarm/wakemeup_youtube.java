@@ -51,7 +51,7 @@ public class wakemeup_youtube extends YouTubeBaseActivity implements   YouTubePl
     TextView timer;
     MediaPlayer mp4,mp5;
     int level;
-    SharedPreferences mlevel ;
+
     AudioManager audioManager;
 
     int a,b,c,d;

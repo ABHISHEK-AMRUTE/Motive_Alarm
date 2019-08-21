@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class starter extends AppCompatActivity {
-  //  VideoView vv;
+
     private static int SPLASH_TIME_OUT =2000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ public class starter extends AppCompatActivity {
                 startActivity(in);
                 finish();
             }
-        }, 0);
+        }, 1000);
 
         }
 

@@ -101,6 +101,8 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/touchmename"
                     android:layout_width="match_parent"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:layout_height="wrap_content">
 
                     <ImageView

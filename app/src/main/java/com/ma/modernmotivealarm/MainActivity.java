@@ -1,8 +1,9 @@
 package com.ma.modernmotivealarm;
 
-import android.app.Activity;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.google.android.gms.ads.AdRequest;
@@ -34,10 +35,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
-   String count_of_vi="count_of_vi",file_For_alarm="file_For_alarm";
-   int count_of_alarms;
-   TextView fadeit;
+    TextView fadeit;
    ImageView fadde;
     private RecyclerView mrecu;
   int count=1;
@@ -273,7 +271,10 @@ AdView mAdView;
             startActivity(inte);
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
-            startActivity(new Intent(MainActivity.this,moreapps.class));
+           Toast.makeText(MainActivity.this,"Directing you to goole play.",Toast.LENGTH_LONG).show();
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("https://play.google.com/store/apps/developer?id=ABHISHEK+AMRUTE"));
+            startActivity(browserIntent);
         } else if (id == R.id.nav_slideshow) {
             startActivity(new Intent(MainActivity.this,video_tutorial.class));
         } else if (id == R.id.nav_tools) {
