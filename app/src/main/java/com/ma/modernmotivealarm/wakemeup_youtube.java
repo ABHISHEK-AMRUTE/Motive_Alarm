@@ -116,9 +116,7 @@ public class wakemeup_youtube extends YouTubeBaseActivity implements   YouTubePl
        audioManager = (AudioManager) getApplicationContext().getSystemService(Context.AUDIO_SERVICE);
         for(int x=0;x<=15;x++)
             audioManager.adjustVolume(AudioManager.ADJUST_RAISE, AudioManager.FLAG_PLAY_SOUND);
-       for(int x=0;x<=2;x++)
-            audioManager.adjustVolume(AudioManager.ADJUST_LOWER, AudioManager.FLAG_PLAY_SOUND);
-        mp5.start();
+       mp5.start();
 
 
         mp4.start();
@@ -198,6 +196,7 @@ public class wakemeup_youtube extends YouTubeBaseActivity implements   YouTubePl
                 count_of_problems--;
                 Toast.makeText(this, "Problem number: "+count_of_problems+1, Toast.LENGTH_SHORT).show();
                 settext();
+                get.setText("");
             }
 
         }
@@ -218,6 +217,7 @@ public class wakemeup_youtube extends YouTubeBaseActivity implements   YouTubePl
                 count_of_problems--;
                 Toast.makeText(this, "Problem number: "+count_of_problems+1, Toast.LENGTH_SHORT).show();
                 settext();
+                get.setText("");
             }
         }
         else

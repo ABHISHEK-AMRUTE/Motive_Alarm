@@ -109,7 +109,7 @@ timer.setVisibility(View.INVISIBLE);note.setVisibility(View.INVISIBLE);
         }.start();
 
        imageUrl =  getIntent().getStringExtra("video_path");
-        if(imageUrl.equals(""))
+        if(imageUrl==null)
         {
             imageUrl="android.resource://" + getPackageName() + "/" + R.raw.sampleplay;
         }
@@ -284,6 +284,7 @@ timer.setVisibility(View.INVISIBLE);note.setVisibility(View.INVISIBLE);
                  count_of_problems--;
                  Toast.makeText(this, "Problem number: "+count_of_problems+1, Toast.LENGTH_SHORT).show();
                  settext();
+                 get.setText("");
              }
 
         }
@@ -304,6 +305,7 @@ timer.setVisibility(View.INVISIBLE);note.setVisibility(View.INVISIBLE);
                 count_of_problems--;
                 Toast.makeText(this, "Problem number: "+count_of_problems+1, Toast.LENGTH_SHORT).show();
                 settext();
+                get.setText("");
             }
 
         }

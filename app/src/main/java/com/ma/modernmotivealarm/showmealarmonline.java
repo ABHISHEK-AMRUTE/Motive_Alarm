@@ -98,6 +98,8 @@ public class showmealarmonline extends YouTubeBaseActivity {
 
         name.setText(getIntent().getStringExtra("name"));
         path= getIntent().getStringExtra("videopath");
+        if(path==null)
+            path="moGTAWG8yHo";
         onInitializedListener = new YouTubePlayer.OnInitializedListener() {
 
             @Override

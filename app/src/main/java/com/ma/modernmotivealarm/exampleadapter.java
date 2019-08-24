@@ -220,7 +220,7 @@ CardView cd;
                            }
                            else if(minute<current_minute)
                            {
-                               millisec =24*60*60*1000 - (60-minute)*60*1000;
+                               millisec =24*60*60*1000 - (minute)*60*1000;
                            }
                            else if(minute>current_minute)
                            {
