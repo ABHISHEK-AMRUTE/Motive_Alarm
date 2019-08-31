@@ -255,7 +255,14 @@ AdView mAdView;
             sendIntent.putExtra(Intent.EXTRA_TEXT, "Try MOTIVE ALARM! a new way of waking. Wake up with favorite motivational video along with a math challenge. Download the app now :- https://play.google.com/store/apps/details?id=com.ma.modernmotivealarm");
             sendIntent.setType("text/plain");
             startActivity(sendIntent);
-        }
+        }else
+            if(id==R.id.gifts)
+            {
+                Toast.makeText(MainActivity.this,"Directing you to Share MA get MI contest.",Toast.LENGTH_LONG).show();
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW,
+                        Uri.parse("https://docs.google.com/forms/d/e/1FAIpQLSddALzOScjFyjkCtRY0IIYp7i5yf_IA4T8hPw2FJBvM1Lm4XA/viewform?usp=sf_link"));
+                startActivity(browserIntent);
+            }
 
         return super.onOptionsItemSelected(item);
     }
@@ -270,7 +277,12 @@ AdView mAdView;
             Intent inte= new Intent(this,Main2Activity.class);
             startActivity(inte);
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.gits) {
+            Toast.makeText(MainActivity.this,"Directing you to Share MA get MI contest.",Toast.LENGTH_LONG).show();
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("https://docs.google.com/forms/d/e/1FAIpQLSddALzOScjFyjkCtRY0IIYp7i5yf_IA4T8hPw2FJBvM1Lm4XA/viewform?usp=sf_link"));
+            startActivity(browserIntent);
+        }else if (id == R.id.nav_gallery) {
            Toast.makeText(MainActivity.this,"Directing you to goole play.",Toast.LENGTH_LONG).show();
             Intent browserIntent = new Intent(Intent.ACTION_VIEW,
                     Uri.parse("https://play.google.com/store/apps/developer?id=ABHISHEK+AMRUTE"));

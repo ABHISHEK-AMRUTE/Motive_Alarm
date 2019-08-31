@@ -5,6 +5,10 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/gits"
+            android:icon="@drawable/ic_card_giftcard_black_24dp"
+            android:title="Share MA Get MI" />
+        <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_people_black_24dp"
             android:title="About App" />
