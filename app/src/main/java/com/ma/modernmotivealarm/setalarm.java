@@ -176,7 +176,10 @@ bt2.setOnClickListener(new View.OnClickListener() {
                      minutes = getIntent().getIntExtra("minutes", 0);
                      id = getIntent().getIntExtra("id", 0);
                      taketime(hours,minutes);
-                     contentURI= Uri.parse(getIntent().getStringExtra("path"));
+                     String str =getIntent().getStringExtra("path");
+                     if(str=="")
+                         str="android.resource://" + getPackageName() + "/" + R.raw.sampleplay;; // todo enter the path
+                     contentURI= Uri.parse(str);
                      vv.setVideoURI(contentURI);
                      vv.requestFocus();
                      vv.start();

@@ -142,7 +142,11 @@ public class setalarmonline extends YouTubeBaseActivity   {
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
                 enableDisableView(vv, true);
                 youTubePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.DEFAULT);
+                if(path==null)
+                    path="moGTAWG8yHo";
                 youTubePlayer.loadVideo(path);
+
+
 
             }
 

@@ -77,6 +77,7 @@ public class showmyalarmoffline extends AppCompatActivity {
                 Uri contentURI= Uri.parse(defaulta);
                 vv.setVideoURI(contentURI);
                 vv.requestFocus();
+
                 vv.start();
 
 
@@ -114,6 +115,17 @@ public class showmyalarmoffline extends AppCompatActivity {
 
         name.setText(getIntent().getStringExtra("name"));
 
+
+    }
+
+    @Override
+    protected void onResume() {
+
+        super.onResume();
+        if(!vv.isPlaying()){
+
+            vv.start();
+        }
 
     }
 
