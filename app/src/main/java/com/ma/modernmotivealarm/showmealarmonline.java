@@ -98,7 +98,7 @@ public class showmealarmonline extends YouTubeBaseActivity {
 
         name.setText(getIntent().getStringExtra("name"));
         path= getIntent().getStringExtra("videopath");
-        if(path==null)
+        if(path=="")
             path="moGTAWG8yHo";
         onInitializedListener = new YouTubePlayer.OnInitializedListener() {
 
@@ -106,7 +106,7 @@ public class showmealarmonline extends YouTubeBaseActivity {
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
                 enableDisableView(vv, true);
                 youTubePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.DEFAULT);
-                if(path==null)
+                if(path=="")
                     path="moGTAWG8yHo";
                 youTubePlayer.loadVideo(path);
 

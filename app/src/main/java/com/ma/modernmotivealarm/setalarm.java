@@ -70,6 +70,7 @@ public class setalarm extends AppCompatActivity implements  Dialogfor_time_picki
                    intr.putExtra("name",name_field.getText().toString());
                   intr.putExtra("hour",hours);
                   intr.putExtra("minute",minutes);
+                  intr.putExtra("path",contentURI.toString());
                     startActivity(intr);
                   Toast.makeText(buttonView.getContext(),"YOU SIWTCHED TO ONLINE MODE",Toast.LENGTH_LONG).show();
 
@@ -110,7 +111,20 @@ public class setalarm extends AppCompatActivity implements  Dialogfor_time_picki
                  chooseVideoFromGallary();
              }
          });
+        vv.setOnErrorListener(new MediaPlayer.OnErrorListener() {
+            @Override
+            public boolean onError(MediaPlayer mp, int what, int extra) {
+                String defaulta ="android.resource://" + getPackageName() + "/" + R.raw.sampleplay;//todo change deffault local video
+                Uri contentURI= Uri.parse(defaulta);
+                vv.setVideoURI(contentURI);
+                vv.requestFocus();
 
+                vv.start();
+
+                Toast.makeText(setalarm.this,"Video failed to load,you might have force stoped the APP.Now loading default video",Toast.LENGTH_LONG).show();
+                return true;
+            }
+        });
 
 bt2.setOnClickListener(new View.OnClickListener() {
     @Override
@@ -177,7 +191,7 @@ bt2.setOnClickListener(new View.OnClickListener() {
                      id = getIntent().getIntExtra("id", 0);
                      taketime(hours,minutes);
                      String str =getIntent().getStringExtra("path");
-                     if(str=="")
+                     if(str==null)
                          str="android.resource://" + getPackageName() + "/" + R.raw.sampleplay;; // todo enter the path
                      contentURI= Uri.parse(str);
                      vv.setVideoURI(contentURI);
@@ -272,7 +286,16 @@ bt2.setOnClickListener(new View.OnClickListener() {
 
         }
     }
+    @Override
+    protected void onResume() {
 
+        super.onResume();
+        if(!vv.isPlaying()){
+
+            vv.start();
+        }
+
+    }
     @Override
     public void onBackPressed() {
 

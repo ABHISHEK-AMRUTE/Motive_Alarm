@@ -18,8 +18,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 
 import androidx.appcompat.app.AppCompatActivity;
-import android.util.Log;
-import android.view.KeyEvent;
+
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
@@ -27,12 +26,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import android.widget.VideoView;
-
-
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
-import com.google.android.gms.ads.MobileAds;
 
 import java.util.Random;
 import java.util.Timer;
@@ -109,7 +102,7 @@ timer.setVisibility(View.INVISIBLE);note.setVisibility(View.INVISIBLE);
         }.start();
 
        imageUrl =  getIntent().getStringExtra("video_path");
-        if(imageUrl==null)
+        if(imageUrl.matches(""))
         {
             imageUrl="android.resource://" + getPackageName() + "/" + R.raw.sampleplay;
         }
@@ -149,7 +142,7 @@ timer.setVisibility(View.INVISIBLE);note.setVisibility(View.INVISIBLE);
                     audioManager.adjustVolume(AudioManager.ADJUST_RAISE, AudioManager.FLAG_PLAY_SOUND);
                 audioManager.adjustVolume(AudioManager.ADJUST_LOWER, AudioManager.FLAG_PLAY_SOUND);
                 audioManager.adjustVolume(AudioManager.ADJUST_LOWER, AudioManager.FLAG_PLAY_SOUND);
-                Toast.makeText(wakemeup.this,time_delay+" main intensional",Toast.LENGTH_LONG);
+
                 SharedPreferences timed =getSharedPreferences(timedelay,MODE_PRIVATE);
                 SharedPreferences.Editor edt  = timed.edit();
                 edt.putInt("temp_time_delay",time_delay);

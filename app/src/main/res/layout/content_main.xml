@@ -59,6 +59,19 @@
         ads:layout_constraintStart_toStartOf="parent"
         ads:layout_constraintTop_toBottomOf="@+id/tofadeimage" />
 
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Participate in Share MA Get MI contest now"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        ads:layout_constraintBottom_toTopOf="@+id/adView1111"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent" />
+
     <ScrollView
         android:id="@+id/scrollView10"
         android:layout_width="0dp"
@@ -86,6 +99,7 @@
                 app:layout_constraintHorizontal_bias="0.55"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
         </LinearLayout>
     </ScrollView>
 

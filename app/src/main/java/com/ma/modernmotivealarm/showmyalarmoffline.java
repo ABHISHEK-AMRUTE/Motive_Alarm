@@ -80,8 +80,8 @@ public class showmyalarmoffline extends AppCompatActivity {
 
                 vv.start();
 
-
-                return false;
+          Toast.makeText(showmyalarmoffline.this,"Video failed to load,you might have force stoped the APP",Toast.LENGTH_LONG).show();
+                return true;
             }
         });
         vv.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {

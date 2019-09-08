@@ -22,7 +22,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-import com.google.android.gms.ads.InterstitialAd;
+
 
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
@@ -80,7 +80,7 @@ public class wakemeup_youtube extends YouTubeBaseActivity implements   YouTubePl
         level=mlevel.getInt("level",1);
 
           path= getIntent().getStringExtra("video_path");
-          if(path==null)
+          if(path.matches(""))
               path="moGTAWG8yHo";
         SharedPreferences prob =getSharedPreferences(numberofprobl,MODE_PRIVATE);
         count_of_problems=prob.getInt("numb_prob",2);

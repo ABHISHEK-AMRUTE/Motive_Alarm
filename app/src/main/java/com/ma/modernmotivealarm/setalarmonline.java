@@ -113,6 +113,7 @@ public class setalarmonline extends YouTubeBaseActivity   {
                     intr.putExtra("hour",hour);
                     intr.putExtra("minute",minute);
                     intr.putExtra("yes",1);
+                    intr.putExtra("path",getIntent().getStringExtra("path"));
                     // 1 - yes do it.
                     startActivity(intr);
                 }
@@ -142,7 +143,7 @@ public class setalarmonline extends YouTubeBaseActivity   {
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
                 enableDisableView(vv, true);
                 youTubePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.DEFAULT);
-                if(path==null)
+                if(path=="")
                     path="moGTAWG8yHo";
                 youTubePlayer.loadVideo(path);
 
