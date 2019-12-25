@@ -12,7 +12,7 @@ The Motive alarm app is a whole new way of waking which allows you to wake up fr
 
 The best part of the app is that it prevents you from snoozing the alarm (which most of us do)
 
-There are many features in this app which make it stand apart from the crowd, at the cutting age. Some of them are:-
+There are many features in this app which make it stand apart from the crowd, at the cutting edge. Some of them are:-
 
 UNLIMITED ALARMS -
 can't wake up in one alarm? no problem! Our app allows you to set multiple alarms.
