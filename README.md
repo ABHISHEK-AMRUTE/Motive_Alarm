@@ -1,12 +1,14 @@
-                                                           MOTIVE ALARM
+# Motive Alarm
                                                            
-Before Installation : - 1> You will need to recconect to firebase
-                        2> You have to add Youtube player API 
+Before Installation : -  
+1> You will need to recconect to firebase  
+2> You have to add Youtube player API   
+# Screenshots
+<img src="https://github.com/ABHISHEK-AMRUTE/Motive_Alarm/blob/master/WhatsApp%20Image%202019-12-26%20at%207.00.34%20PM%20(5).jpeg" width="250" height="500">   <img src="https://github.com/ABHISHEK-AMRUTE/Motive_Alarm/blob/master/WhatsApp%20Image%202019-12-26%20at%207.00.34%20PM%20(4).jpeg" width="250" height="500">   <img src="https://github.com/ABHISHEK-AMRUTE/Motive_Alarm/blob/master/WhatsApp%20Image%202019-12-26%20at%207.00.34%20PM%20(3).jpeg" width="250" height="500">  
+<img src="https://github.com/ABHISHEK-AMRUTE/Motive_Alarm/blob/master/WhatsApp%20Image%202019-12-26%20at%207.00.34%20PM.jpeg" width="250" height="500">   <img src="https://github.com/ABHISHEK-AMRUTE/Motive_Alarm/blob/master/WhatsApp%20Image%202019-12-26%20at%207.00.34%20PM%20(2).jpeg" width="250" height="500">   <img src="https://github.com/ABHISHEK-AMRUTE/Motive_Alarm/blob/master/WhatsApp%20Image%202019-12-26%20at%207.00.34%20PM%20(1).jpeg" width="250" height="500">  
                         
                         
-                        
-                        
-                                                          ABOUT APP
+# About App
                         
 The Motive alarm app is a whole new way of waking which allows you to wake up fresh, exited and most of all, motivated.
 
